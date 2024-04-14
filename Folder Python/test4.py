@@ -1,5 +1,6 @@
-# Pembahasan Dicoding mengenai array dan pemrosesannya
-
+# Pembahasan Dicoding mengenai array dan pemrosesannya serta Matriks
+import numpy as np
+import sys
 # Mendefinisikan Array
 nama_var = [1,2,3,4,5]
 print(nama_var)
@@ -57,3 +58,42 @@ for i in range(len(buah)):
 
     print(f'Elemen saat ini: {elemen_saatini_2}, Elemen Seanjutnya: {elemen_selanjutnya_2}')
 print()
+
+# Implementasi Matriks menggunakan Python
+matriks = [ [1,2,3], [4,5,6], [7,8,9,10]]
+print(matriks)
+
+matriks_2 = np.array([[1,2,3],[4,5,6]])
+print(matriks_2)
+
+print("Ukuran keseluruhan elemen list dalam bytes = ",sys.getsizeof(matriks)*len(matriks))
+print("Ukuran keseluruhan elemen NumPy dalam bytes = ", matriks_2.size*matriks_2.itemsize)
+
+# Matriks menggunakan for nested beserta list comprehension
+matriks_3 = [[0 for i in range(4)] for j in range(3)]
+print(matriks_3)
+print(matriks[1][2])
+
+# Membuat matriks 2 x 2
+matriks_4 = [[5,0],[1,-2]]
+def_mat = [[0 for j in range(2)] for i in range (2)]
+
+for i in range(len(matriks_4)):
+    for j in range(len(matriks_4[0])):
+        def_mat[i][j] = matriks_4[i][j] * 2
+
+print(def_mat)
+print(len(matriks_4[0]))
+
+# membuat matriks dengan numpy
+matriks_5 = np.array([[5,0],[1, -2]])
+hasil = matriks_5 * 5
+print(hasil)
+
+# Membuat Parmeter
+def film (a):
+    print("Film " + a + " sangat seru")
+
+film("Forget Me Not")
+film("Drive My Car")
+film("Joker")

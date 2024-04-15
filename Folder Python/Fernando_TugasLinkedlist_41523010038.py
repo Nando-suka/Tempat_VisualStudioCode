@@ -27,10 +27,12 @@ class Linkedlist:
         print(temp.data,end=' ')
         temp = temp.next
      print()
+
   def deleteFromBeginning(self):
      if self.head is None:
        return "The List is empty"
      self.head = self.head.next
+
   def deleteFromEnd(self):
     if self.head is None:
       return "The List is empty"
@@ -41,9 +43,21 @@ class Linkedlist:
     while temp.next.next:
       temp = temp.next
     temp.next = None
+    
   def deleteAll (self):
      for i in range (0,2):
       self.head = self.head.next
+
+  def search (self,value):
+    current = self.head
+    position = 0
+    while current:
+      if current.data == value:
+        return f"Value {value} found at Position {position}"
+      current = current.next
+      position += 1
+    return f"Value {value} not found in the list"
+
 
 
 
@@ -72,6 +86,10 @@ if (Ask == "y" or Ask == "Y"):
    llist.deleteFromEnd()
    print("List After Deletion (End):")
    llist.printList()
+
+   # Mencari data
+   print(llist.search('Quick'))
+   print(llist.search('lazy'))
 
    # Menghapus keseluruhan linkedlist
    llist.deleteAll()

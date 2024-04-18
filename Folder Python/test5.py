@@ -84,3 +84,12 @@ def pertambahan (a,b):
 
 ttp2 = pertambahan(5,6)
 print(ttp2)
+
+"""  Dalam Python fungsi itu adalah first class object sehingga fungsi dapat dijadikan sebagai
+argumen ataupun sebagai pass parameter. properties yang terdapat dalam fungsi Python:
+1. Sebuah fungsi adalah sebuah instance dalam type objek
+2. Kamu dapat memasukkan fungsi ke dalam variabel
+3. kamu dapat pass sebuah fungsi sebagai parameter ke fungsi yang lain
+4. kamu dapat mengembalikan fungsi dari fungsi
+5. kamu dapat memasukkan mereka ke dalam struktur data, seperti hash tables, list, dan lain-lain
+ """

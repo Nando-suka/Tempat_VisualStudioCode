@@ -54,4 +54,27 @@ try:
 except NegatifInputError as w:
     print(f"Error {w}")
 
+# Persiapan penulisan kode untuk penggunaan private python
+class Myclass:
+    def __init__ (self):
+        self._private_var = 42
+        self._secret_list = [1,2,3]
 
+    def _private_method (self):
+        print("Ini adalah method non publik")
+
+    def public_method (self):
+        print("Ini adalah metode publik")
+        self._private_method()
+
+class mySecondClass:
+    def __init__(self):
+        self._rahasia_var = 12
+        self._rahasia_list = [5,10,15]
+
+    def _rahasia_method (self):
+        print("Ini adalah method non publik")
+
+    def publik_method (self):
+        print("Ini adalah metode publik")
+        self._rahasia_method()

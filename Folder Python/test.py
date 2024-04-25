@@ -4,10 +4,32 @@
 ayo = "ayo"
 print(ayo.upper())
 
+# Membuat keseluruhan nilai dalam string menjadi kapital
+perkataan = "After all i do for you"
+print(perkataan.upper())
+
+nama_lengkap = ["Fernando","Gallagher","Maholi","Tumanggor","Felix","Owen"]
+for i in nama_lengkap:
+    print(i.upper(), end=" ")
+
+print()
+index = 0
+while index < 10:
+    print(index, end=" ")
+    index += 1
+
 # Membuat Keseluruhan nilai dalam string menjadi huruf kecil
 ayo2 = "AYO"
 print(ayo2.lower())
 
+ayo3 = "FERNANDO".lower()
+print(ayo3)
+
+nama = "FERNANDO DAN MAHOLI TUMANGGOR"
+print(nama.lower())
+
+kota = 'JAKARTA BARAT'
+print(kota.lower())
 """  Metode untuk menghapus whitespace dan kata yang tidak diinginkan
  dalam string dengan rata kanan
  """
@@ -28,10 +50,14 @@ print(ayo4.strip("Ayo"))
 ayo5 = "Mari pergi ke hutan"
 print(ayo5.startswith("Mari"))
 
+# Menggunakan startswith untuk mengembalikan false 
+ayo51 = "Aku melihatnya pergi"
+print(ayo51.startswith("Dia"))
+
 # Menggunakan endswith untuk menemukan suatu kata pada akhir string
 ayo6 = 'Dia ingin belajar Cloud Computing'
 print(ayo6.endswith('Cloud'))
-
+print(ayo6.endswith("Computing"))
 # Menggunakan .join() untuk menggabungkan atau memisahkan string 
 print(" ".join(["Ayo","Indonesia"]))
 print(" Menyala ".join(["Api","Air","Dia",""]))
@@ -39,6 +65,12 @@ print(" Menyala ".join(["Api","Air","Dia",""]))
 # Metode .split() untuk memisahkan string menjadi list
 ayo7 = "aku menjadi semangat dengan belajar sesuai passion"
 print(ayo7.split())
+
+# Metode .split() untuk memisahkan string menjadi list (2)
+nama_merek_laptop = "Acer Asus HP Dell Lenovo Axioo Avell Msi "
+dipisah = nama_merek_laptop.split()
+print(dipisah[1])
+print(dipisah)
 
 # Metode untuk mengganti string selanjutnya dapat menggunakan tag .replace()
 ayo8 = "Maholi sekolah di Smk Jakarta Satu"
@@ -93,3 +125,4 @@ print(ayoo7.center(10,'-'))
 print(r'Fernando\tTumanggor')
 
 print(dict([['name','Dicoding'],['age',17]]))
+print(dict([['Nama',"Fernando"], ['umur', 19]]))

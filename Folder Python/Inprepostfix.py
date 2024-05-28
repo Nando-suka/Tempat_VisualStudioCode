@@ -13,10 +13,5 @@ def is_balanced (expression):
     return not stack
 
 # Menerima input langsung dari user
-
-
-
-
-
 user_input = input("Masukkan sebuah ekspresi untuk diperiksa apakah seimbang:")
 print("Balanced" if is_balanced(user_input) else "Not Balanced")

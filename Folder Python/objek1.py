@@ -9,12 +9,16 @@ class Mobil:
     def tambahKecepatan (self):
         self.kecepatan += 10
 
+    def menampilkan (self):
+        print("Display accepted")
+
 
 # Proses Pemanggilan kelas
 Mobil1 = Mobil("Toyota","Hitam",100)
 print(Mobil1)
 print(Mobil1.kecepatan)
 Mobil1.tambahKecepatan()
+Mobil1.menampilkan()
 print(Mobil1.kecepatan)
 
 # Belajar memahami konsep private dan public 
@@ -43,4 +47,4 @@ class tugas:
         print("Ini Pesan Rahasia")
 
 task1 = tugas()
-task1.__privateMessages()
+task1.__privateMessages() # Menampilkan Error

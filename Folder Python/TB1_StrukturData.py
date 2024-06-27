@@ -1,9 +1,11 @@
+# Membuat program berguna dan bermanfaat dengan menggunakan library aquarel
+
 import matplotlib.pyplot as plt
 from aquarel import load_theme
 import numpy as np
 
 # Memasukkan theme dari Aquarel
-theme = load_theme("boxy_dark")
+theme = load_theme("scientific")
 theme.apply()
 
 # Data untuk box plot

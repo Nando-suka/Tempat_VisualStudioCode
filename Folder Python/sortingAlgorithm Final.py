@@ -3,6 +3,7 @@ import matplotlib.animation as animation
 import numpy as np
 import tkinter as tk
 from tkinter import ttk
+import time
 
 # Membuat Prosedur Algoritma bubble sort
 def bubble_sort(arr):
@@ -89,6 +90,23 @@ def heapify(arr, n, i):
         # Heapify root
         yield from heapify(arr, n, largest)
 
+# Membuat Prosedur Algoritma Shell sort
+def shell_sort(arr):
+    n = len(arr)
+    gap = n // 2
+
+    while gap > 0:
+        for i in range(gap, n):
+            temp = arr[i]
+            j = i
+            while j >= gap and arr[j - gap] > temp:
+                arr[j] = arr[j - gap]
+                j -= gap
+                yield arr
+            arr[j] = temp
+            yield arr
+        gap //= 2
+
 # Menambahkan kode untuk visualisasi
 def visualize_sorting(arr, algorithm, title):
     fig, ax = plt.subplots()
@@ -100,12 +118,19 @@ def visualize_sorting(arr, algorithm, title):
     # Tambahkan anotasi angka di atas bar
     annotations = [ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height(), f'{int(bar.get_height())}', ha='center', va='bottom', color='black', fontsize=10) for bar in bars]
 
+    start_time = time.time()
+    
     # Untuk update bar setiap perulangan
     def update(arr):
+        current_time = time.time()
+        elapsed_time = current_time - start_time
+
         for bar, val, annotation in zip(bars, arr, annotations):
             bar.set_height(val)
             annotation.set_text(f'{int(val)}')
             annotation.set_y(val)
+
+        ax.set_xlabel(f'Waktu eksekusi: {elapsed_time:.6f} detik')
 
     anim = animation.FuncAnimation(fig, func=update, frames=algorithm(arr), repeat=False, blit=False)
     plt.show()
@@ -116,7 +141,7 @@ def generate_random_array(size, min_value, max_value):
 
 # Memulai visualisasi
 def start_visualization():
-    size = 50
+    size = 30
     min_value = 1
     max_value = 100
     arr = generate_random_array(size, min_value, max_value)
@@ -132,6 +157,8 @@ def start_visualization():
         algorithm = lambda arr: quick_sort(arr, 0, len(arr) - 1)
     elif selected_algorithm == "Heap Sort":
         algorithm = heap_sort
+    elif selected_algorithm == "Shell Sort":
+        algorithm = shell_sort
     else:
         raise ValueError("Unknown algorithm selected")
 
@@ -144,13 +171,12 @@ root.title("Visualisasi Algoritma Sorting")
 ttk.Label(root, text="Memilih Algoritma:").grid(column=0, row=0, padx=10, pady=10)
 
 algorithm_var = tk.StringVar()
-algorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Quick Sort", "Heap Sort"]
+algorithms = ["Bubble Sort", "Insertion Sort", "Selection Sort", "Quick Sort", "Heap Sort", "Shell Sort"]
 algorithm_menu = ttk.Combobox(root, textvariable=algorithm_var, values=algorithms)
 algorithm_menu.grid(column=1, row=0, padx=10, pady=10)
 algorithm_menu.current(0)  # Default to first algorithm
 
 start_button = ttk.Button(root, text="Start", command=start_visualization)
 start_button.grid(column=0, row=1, columnspan=2, pady=20)
-ttk.Button(root, text="Quit", command=root.destroy).grid(column=4, row=5)
 
 root.mainloop()

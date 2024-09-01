@@ -47,7 +47,7 @@ def generate_random_multi_dim_array(rows, cols, min_value, max_value):
     return np.random.randint(min_value, max_value, size=(rows, cols))
 
 # Contoh penggunaan dengan array multi dimensi acak
-arr = generate_random_multi_dim_array(5, 4, 1, 100)
+arr = generate_random_multi_dim_array(10, 4, 1, 100)
 print("Array sebelum diurutkan:")
 print(arr)
 insertion_sort_visualize(arr)

@@ -7,6 +7,13 @@ kelompok = [
 ]
 print(kelompok)
 
+nama_idola = [
+    "Hoshino",
+    "Ruby"
+]
+print(nama_idola)
+
+
 # Anotasi fungsi
 def luasPersegiPanjang (panjang: int = 2,lebar: int = None):
     luas = panjang * lebar
@@ -14,6 +21,15 @@ def luasPersegiPanjang (panjang: int = 2,lebar: int = None):
 
 luas_satu = luasPersegiPanjang(lebar= 10)
 print(luas_satu)
+
+# Anotasi Fungsi yang kedua
+def kelilingpersegi(jumlah: int = 4, sisi: int = None):
+    keliling = jumlah * sisi
+    return  keliling
+
+luaskeliliingPersegi = kelilingpersegi(sisi=8)
+print(luaskeliliingPersegi)
+
 
 # Tanpa Anotasi Fungsi
 def luasSegitiga (alas=None, tinggi=None, tambahan=2):

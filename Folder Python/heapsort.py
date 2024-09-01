@@ -18,27 +18,32 @@ def heap(arr, n, i):
 
         # Heapify subtree yang berpengaruh
         heap(arr, n, terbesar)
-    
-def heapSort (arr):
+
+
+def heapSort(arr):
     n = len(arr)
 
     # Membangun max heap
-    for i in range (n // 2 - 1, -1, -1):
-        heap(arr,n,i)
+    for i in range(n // 2 - 1, -1, -1):
+        heap(arr, n, i)
 
     # Ekstraksi elemen satu per satu dari heap
-    for i in range (n - 1, 0, -1):
-        arr[0], arr[i] = arr[i], arr[0] # Tukar root dengan elemen terakhir
-        heap(arr, i, 0) # Panggil heap pada heap yang direduksi
+    for i in range(n - 1, 0, -1):
+        arr[0], arr[i] = arr[i], arr[0]  # Tukar root dengan elemen terakhir
+        heap(arr, i, 0)  # Panggil heap pada heap yang direduksi
 
     return arr
 
 # Contoh penggunaan
-list_angka = [12,11,13,5,6,7]
-list_angka2 = [10,23,4,5,12,3]
+
+
+list_angka = [12, 11, 13, 5, 6, 7]
+list_angka2 = [10, 23, 4, 5, 12, 3]
+list_angka3 = [10, 2, 3, 4, 5, 19, 29, 39, 41, 30]
 print("Array sebelum di sorting: ", list_angka)
 sortiran = heapSort(list_angka)
 sortiran2 = heapSort(list_angka2)
-print("Array setelah disortig: ", sortiran)
+sortiran3 = heapSort(list_angka3)
+print("Array setelah disorting: ", sortiran)
 print("Array setelah disorting kedua: ", sortiran2)
-
+print("Array setelah disorting ketiga: ", sortiran3)

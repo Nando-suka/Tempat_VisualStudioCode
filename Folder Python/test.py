@@ -8,9 +8,16 @@ print(ayo.upper())
 perkataan = "After all i do for you"
 print(perkataan.upper())
 
-nama_lengkap = ["Fernando","Gallagher","Maholi","Tumanggor","Felix","Owen"]
+nama_lengkap = ["Fernando", "Gallagher", "Maholi", "Tumanggor", "Felix", "Owen"]
 for i in nama_lengkap:
     print(i.upper(), end=" ")
+
+print()
+# Membuat keseluruhan nilai dalam string menjadi kapital (2)
+perkataan2 = "Terima kasih Tuhan"
+perkataan3 = "Cinta mengambang di jendela ketika kemiskinan mengetuk pintu"
+print(perkataan2.upper())
+print(perkataan3.lower())
 
 print()
 index = 0
@@ -59,8 +66,8 @@ ayo6 = 'Dia ingin belajar Cloud Computing'
 print(ayo6.endswith('Cloud'))
 print(ayo6.endswith("Computing"))
 # Menggunakan .join() untuk menggabungkan atau memisahkan string 
-print(" ".join(["Ayo","Indonesia"]))
-print(" Menyala ".join(["Api","Air","Dia",""]))
+print(" ".join(["Ayo", "Indonesia"]))
+print(" Menyala ".join(["Api", "Air", "Dia", ""]))
 
 # Metode .split() untuk memisahkan string menjadi list
 ayo7 = "aku menjadi semangat dengan belajar sesuai passion"
@@ -74,7 +81,7 @@ print(dipisah)
 
 # Metode untuk mengganti string selanjutnya dapat menggunakan tag .replace()
 ayo8 = "Maholi sekolah di Smk Jakarta Satu"
-print(ayo8.replace("sekolah","bersekolah"))
+print(ayo8.replace("sekolah", "bersekolah"))
 
 # Metode untuk memeriksa string apakah nilai yang terdapat pada string adalah huruf kapital
 ayo9 = "AYOBERANINIKRI"
@@ -88,7 +95,7 @@ print(ayoo1.islower())
  maupun keduanya """
 ayoo2 = "ColePalmer20"
 ayoo3 = ' '
-print(ayoo2.isalnum(),ayoo3.isalnum())
+print(ayoo2.isalnum(), ayoo3.isalnum())
 
 # isdecimal digunakan jika hanya angka/numerik yang terdapat di variabel
 ayoo4 = '123'
@@ -97,7 +104,7 @@ print(ayoo4.isdecimal())
 """ Metode isspace() akan mengembalikan nilai True jika string hanya berisi whitespace, 
 seperti spasi, tab, newline, atau karakter whitespace lainnya. """
 ayoo5 = "Fernando Datang"
-print(ayoo5.isspace(),ayoo3.isspace())
+print(ayoo5.isspace(), ayoo3.isspace())
 
 # istitle akan mengembalikan true apabila setiap kata diikuti dengan huruf kapital
 ayoo6 = 'Manusia Gagal'
@@ -119,10 +126,20 @@ print("       Kini".ljust(12))
 
 # center menjadikan teks rata tengah
 ayoo7 = 'Judul'
-print(ayoo7.center(10,'-'))
+print(ayoo7.center(10, '-'))
+
+# center menjadikan teks rata tengah (2)
+ayoo8 = 'Berita'
+print(ayoo8.center(10, '-'))
 
 # Python menyediakan cara untuk mencetak string secara asli/murni dengan raw
 print(r'Fernando\tTumanggor')
 
-print(dict([['name','Dicoding'],['age',17]]))
-print(dict([['Nama',"Fernando"], ['umur', 19]]))
+print(dict([['name', 'Dicoding'], ['age', 17]]))
+print(dict([['Nama', "Fernando"], ['umur', 19]]))
+
+# Python menyediakan cara untuk mencetak string secara asli/murni dengan raw
+print(r'Sekolah\tminggu')
+kamus = dict([['skill', 'python'], ['framework', ['tkinter', 'django', 'matplotlib']]])
+print(type(kamus))
+print(kamus)

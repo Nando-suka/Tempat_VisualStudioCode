@@ -1,4 +1,4 @@
-import array
+    import array
 # Mengakses nilai variabel array
 dataUmur = [35,23,20,19,11]
 print(dataUmur)
@@ -9,6 +9,7 @@ print(dataUmur)
 print(dataUmur[0])
 print(dataUmur[3])
 
+print()
 print()
 
 dataUmur2 = [[56,29,28,29,10],[1,5,6,7,8],[14,14,15,16,16]]

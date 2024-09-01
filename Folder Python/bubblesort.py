@@ -47,12 +47,31 @@ def bubblesort (nums):
 list2 = [90,34,542,54,3,24]
 print(bubblesort(list2))
 
+# Membuat bubble sort 3
+
+def bubbleSort (angka):
+    an = len(angka)
+    for i in range(an):
+        for j in range(an - i - 1):
+            if angka[j] > angka[j+1]:
+                angka[j], angka[j+1] = angka[j+1], angka[j]
+    return angka
+
+list3 = [4,30,23,42,19,49,58,63,23,42]
+print(bubbleSort(list3))
 
 angka = [1,2,3,4,5]
 n = len(angka)
 for i in range (n):
     for j in range (0, n-i-1):
         print(j, end=" ")
+
+print()
+angka2 = [10, 20, 30, 40, 50]
+m = len(angka2)
+for i in range(m):
+    for j in range(0, m - i - 1):
+        print(j, end=' ')
 
 print()
 for i in range (len(angka)):
@@ -69,3 +88,9 @@ print()
 for i in range (n):
     for j in range(n-i-1):
         print(j, end=' ')
+
+# Bukankah keren implementasi dari virtual environment?
+# Bisa menjalankan masing-masing kegunaan dari library secara terpisah.
+# Tidak secara global
+# Bagaimana ini masih banyak sekali yang harus saya pelajari dan saya harus benar-benar perhatikan
+# errrorrrrrrr

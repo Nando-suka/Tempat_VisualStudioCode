@@ -10,15 +10,20 @@ print(z)
 
 # Ekspresi juga dapat dilakukan untuk memanipulasi data yang ada
 # Contoh manipulasi data dalam list (menggabungkan)
-angka = [1,48,29,19,42,0,12]
-alat = ["gunting","tang","sepatu","flashdisk"]
+angka = [1, 48, 29, 19, 42, 0, 12]
+alat = ["gunting", "tang", "sepatu", "flashdisk"]
 gabungan = angka + alat
 print(gabungan)
 
 # Contoh manipulasi data dalam list (menduplikasi)
-angka2 = [2,4,2,1]
+angka2 = [2, 4, 2, 1]
 duplikasi = angka2 * 2
 print(duplikasi)
+
+# Contoh manipulasi data dalam list (menduplikasi)
+angka3 = [3, 6, 9, 12, 15]
+duplikasi2 = angka3 * 2
+print(duplikasi2)
 
 x = 1960 
 y = 901 
@@ -28,13 +33,18 @@ print(x % y)
 x = 8
 y = 9
 
-x,y = y,x
-print(x,y)
+x, y = y, x
+print(x, y)
 
 #  Sum Over Every Second List Value
-lsit = [2,46,8,9,9]
+lsit = [2, 46, 8, 9, 9]
 jawaban = sum(lsit[::2])
 print(jawaban)
+
+# Sum Over Every Second List Value (Second)
+uhhh = [10, 20, 30, 40, 50]
+jawaban2 = sum(uhhh[::2])
+print(jawaban2)
 
 # One Liner dengan kondisi statement
 bakso = 20000
@@ -45,6 +55,12 @@ hujan = True
 
 print("Menggunakan Jas Hujan") if hujan else print("Tidak menggunakan Jas Hujan")
 
+# Ternary operator di Python 2
+ujian = False
+
+print("Selamat kamu mendapatkan hadiah") if ujian else print("Terus Berusaha!")
+
+#
 kehadiran = False
 # Implementasi Ternary Tuple
 """ Perlu diingat oleh Anda, ternary tuples sebaiknya dihindari terutama untuk 
@@ -52,5 +68,5 @@ kode dan klausa true/false yang kompleks. Komunitas Python sendiri menganggap
 bahwa cara ternary tuples ini kurang "pythonic" atau "tidak Python banget!"
 karena cukup membingungkan untuk meletakkan kondisi saat True atau False.
  """
-Absen = ("Tidak Hadir !","Hadir") [kehadiran]
+Absen = ("Tidak Hadir !", "Hadir")[kehadiran]
 print(Absen)

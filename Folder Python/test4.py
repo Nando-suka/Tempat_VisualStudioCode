@@ -16,6 +16,12 @@ for i in range (9):
     nilai_baru [i] = i
 print(nilai_baru)
 
+# Mengubah nilai default dengan nilai baru (2)
+nilai_baru2 = [1 for i in range(0, 10)]
+ukuran = len(nilai_baru2)
+for i in range(ukuran):
+    nilai_baru2[i] = i
+print(nilai_baru2)
 # Mengubah nilai default dengan nilai baru (memakai string)
 nama = 'Fernando'
 nilai_baru_2 = [0 for i in nama]

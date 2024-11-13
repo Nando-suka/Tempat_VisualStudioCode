@@ -84,7 +84,7 @@ class BTree:
 btree = BTree(3)
 
 # Memasukkan elemen ke dalam B-Tree
-for item in [10, 20, 5, 6, 12, 30, 7, 17]:
+for item in [10,230,14,13,54,135,63,52,62,24,6]:
     btree.insert(item)
 
 # Menampilkan elemen di B-Tree secara in-order
